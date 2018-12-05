@@ -86,4 +86,38 @@ saa laitettua virtuaalikoneen päälle.
 
 ### phpVirtualBox - (Käyttää selaimen kautta VirtualBoxia)
 
-Nyt kun VirtualBox 5.2 <- (uusin versio tällähetkellä) on asennettu aloin asentamaan VirtualBoxia selaimeen (GUI).
+Nyt kun VirtualBox 5.2 <- (uusin versio tällähetkellä) on asennettu aloin asentamaan VirtualBoxia selaimeen (GUI, phpVirtualBox).
+
+Ensin loin uuden järjestelmäkäyttäjän rootilla ja lisäsin sen "vboxusers" ryhmään (Tätä tullaan tarviamaan):
+```
+  $ useradd -m vbox -G vboxusers
+``` 
+Annoin VirtualBox käyttäjälle salasanan:
+```
+  $ passwd vbox
+```
+Pysyin rootissa ja loin tiedoston /etc/default/virtualbox, jonka sisälle laitoin
+```
+  VBOXWEB_USER=vbox
+```
+Sitten laitoin vboxwebsrv:n päälle:
+```
+  $ systemctl enable vboxweb-service
+  $ systemctl start vbox-service
+```
+Sitten asensin apache web-palvelimen ja php-moduulit:
+```
+  $ apt-get -y install apache2 libapache2-mod-php7.0 libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap libapr1 php7.0-common     php7.0-mysql php7.0-soap php-pear wget
+```
+Uudelleen käynnistin apache2 web-palvelimen:
+```
+  $ systemctl restart apache2.service
+```
+Sitten latasin phpVirtualBoxin:
+```
+  $ wget http://downloads.sourceforge.net/project/phpvirtualbox/phpvirtualbox-5.0-5.zip
+```
+Purin zip-tiedoston:
+```
+  $ unzip phpvirtualbox-5.0-5.zip
+```
