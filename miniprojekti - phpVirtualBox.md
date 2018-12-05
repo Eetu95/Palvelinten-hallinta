@@ -14,25 +14,25 @@ Asensin SaltStackin virtuaalikoneille. Päivitin molemmat koneet:
   $ sudo apt-get upgrade
 ```
 Xubuntulle asensin salt-masterin:
-
+```
   $ sudo apt-get -y install salt-master
-
+```
 Ubuntu Serverille asensin salt-minionin:
-
+```
   $ sudo apt-get -y install salt-minion
-
+```
 Lisäsin herran IP-osoitteen /etc/salt/minion -tiedostoon.
-
+```
   $ echo 'master: (IP-osoite)'|sudo tee /etc/salt/minion
-
+```
 Käynnistin salt-minionin uudelleen:
-
+```
   $ sudo systemctl restart salt-minion
-
+```
 Testasin yhteyden toimivuuden:
-
+```
   $ sudo salt '*' test.ping
-
+```
 Yhteys toimi!
 
 #### VirtualBox 5.2 (uusin versio)
@@ -48,31 +48,42 @@ Päivitettyäni Ubuntu Serverin aloin asentamaan Ubuntu Linux header:eita, jotta
 Headerit asennettu! Sitten asensin VirtualBox repository avaimet ja lisäsin repositoryn Ubuntu Serveriin:
 
 Avainten lisäys:
-
+```
   $ sudo wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
   $ sudo wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
-
+```
 Repositoryn lisäys:
-
+```
   $ sudo sh -c 'echo "deb http://download.virtualbox.org/virtualbox/debian $(lsb_release -sc) contrib" >> /etc/apt/sources.list'
-
+```
 ![keys-and-repository](https://github.com/Eetu95/Palvelinten-hallinta-ict4tn022-3004/blob/master/miniprojektin%20kuvakaappaukset/2.PNG?raw=true)
 
 Kaikki asentui! Sitten asensin itse VirtualBoxin (5.2) paketinhallinnasta. Päivitin ensin paketinhallinnan:
-
+```
   $ sudo apt-get update
-
+```
 Sitten asensin VirtualBox 5.2 -paketit:
-
+```
   $ sudo apt-get install virtualbox-5.2
-  
+``` 
 Tarkistin, että versio on oikea:
- 
+``` 
   $ VBoxManage -v
-  
+```  
  ![virtualbox-installation](https://github.com/Eetu95/Palvelinten-hallinta-ict4tn022-3004/blob/master/miniprojektin%20kuvakaappaukset/3.PNG?raw=true)
 
-VirtualBox 5.2 asentui!
+VirtualBox 5.2 asentui! Katsoin vielä virtualbox help:iä:
+```
+  $ virtualbox -h
+```
+![virtualbox-help](https://github.com/Eetu95/Palvelinten-hallinta-ict4tn022-3004/blob/master/miniprojektin%20kuvakaappaukset/4.PNG?raw=true)
 
+Komennolla:
+```
+ $ --startvm <vmname|UUID>
+```
+saa laitettua virtuaalikoneen päälle.
 
+### phpVirtualBox - (Käyttää selaimen kautta VirtualBoxia)
 
+Nyt kun VirtualBox 5.2 <- (uusin versio tällähetkellä) on asennettu aloin asentamaan VirtualBoxia selaimeen (GUI).
