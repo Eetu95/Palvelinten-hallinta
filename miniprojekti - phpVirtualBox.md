@@ -34,6 +34,22 @@ $ sudo salt '*' test.ping
 
 Yhteys toimi!
 
-#### VirtualBox
+#### VirtualBox 5.2 (uusin versio)
 
-Tarkoituksena oli asentaa VirtualBox ensin manuaalisesti, jotta sitä olisi helpompi automatisoida Saltilla.
+Tarkoituksena oli asentaa VirtualBox ensin manuaalisesti orjalle (Linux Ubuntu Server 16.04.5 LTS AMD64), jotta sitä olisi helpompi automatisoida Saltilla.
+
+Päivitettyäni Ubuntu Serverin aloin asentamaan Ubuntu Linux header:eita, jotta saisin uusimman VirtualBox version (tällä hetkellä 5.,2) käyttööni.
+
+$ sudo apt-get -y install gcc make linux-headers-$(uname -r) dkms
+
+![ubuntu-linux-headers](https://github.com/Eetu95/Palvelinten-hallinta-ict4tn022-3004/blob/master/miniprojektin%20kuvakaappaukset/1.PNG?raw=true)
+
+Headerit asennettu! Sitten asensin VirtualBox repository avaimet ja lisäsin repositoryn Ubuntu Serveriin:
+
+![](https://github.com/Eetu95/Palvelinten-hallinta-ict4tn022-3004/blob/master/miniprojektin%20kuvakaappaukset/2.PNG?raw=true)
+
+Kaikki asentui! Sitten asensin itse VirtualBoxin (5.2) paketinhallinnasta:
+
+
+
+
