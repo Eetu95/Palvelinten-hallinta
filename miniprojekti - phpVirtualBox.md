@@ -7,11 +7,12 @@ Käytin projektin demoamisessa VirtualBox VM ympäristöä. Asensin VirtualBoxii
 ### Manuaalinen asennus
 
 Asensin SaltStackin virtuaalikoneille. Päivitin molemmat koneet:
-
+```
   $ sudo apt-get update
-
+```
+```
   $ sudo apt-get upgrade
-
+```
 Xubuntulle asensin salt-masterin:
 
   $ sudo apt-get -y install salt-master
