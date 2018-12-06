@@ -121,3 +121,15 @@ Purin zip-tiedoston:
 ```
   $ unzip phpvirtualbox-5.0-5.zip
 ```
+Sitten siirryin phpvirtualbox-5.0-5 -hakemistoon:
+```
+  $ cd phpvirtualbox-5.0-5
+```
+Tein konfigurointi tiedoston. Kopioin esimerkki konffi -tiedoston:
+```
+  $ cp config.php-example config.php
+```
+Avasin konffitiedoston ja vaihdoin muuttujan "var $password = 'secret';" salasanan VirtualBox käyttäjäni salasanaksi. Sitten tallensin ja suljin tiedoston. Sitten käynnistin vboxweb-service:n uudestaan, jotta muutokset saatiin voimaan:
+```
+  $ systemctl restart vboxweb-service
+```
