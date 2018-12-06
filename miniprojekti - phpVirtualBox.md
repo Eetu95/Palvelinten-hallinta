@@ -84,7 +84,7 @@ Komennolla:
 ```
 saa laitettua virtuaalikoneen päälle.
 
-### phpVirtualBox - (Käyttää selaimen kautta VirtualBoxia)
+#### phpVirtualBox - (Käyttää selaimen kautta VirtualBoxia)
 
 Nyt kun VirtualBox 5.2 <- (uusin versio tällähetkellä) on asennettu aloin asentamaan VirtualBoxia selaimeen (GUI, phpVirtualBox).
 
@@ -105,6 +105,8 @@ Sitten laitoin vboxwebsrv:n päälle:
   $ systemctl enable vboxweb-service
   $ systemctl start vbox-service
 ```
+![authentication](https://github.com/Eetu95/Palvelinten-hallinta-ict4tn022-3004/blob/master/miniprojektin%20kuvakaappaukset/5.PNG?raw=true)
+
 Sitten asensin apache web-palvelimen ja php-moduulit:
 ```
   $ apt-get -y install apache2 libapache2-mod-php7.0 libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap libapr1 php7.0-common     php7.0-mysql php7.0-soap php-pear wget
@@ -113,11 +115,15 @@ Uudelleen käynnistin apache2 web-palvelimen:
 ```
   $ systemctl restart apache2.service
 ```
-Sitten latasin phpVirtualBoxin:
+Sitten latasin phpVirtualBoxin /var/www/html -hakemistossa:
 ```
   $ wget http://downloads.sourceforge.net/project/phpvirtualbox/phpvirtualbox-5.0-5.zip
 ```
-Purin zip-tiedoston:
+Asensin unzipin:
+```
+  $ sudo apt-get -y install unzip
+```
+Sitten purin zip-tiedoston:
 ```
   $ unzip phpvirtualbox-5.0-5.zip
 ```
@@ -129,7 +135,24 @@ Tein konfigurointi tiedoston. Kopioin esimerkki konffi -tiedoston:
 ```
   $ cp config.php-example config.php
 ```
-Avasin konffitiedoston ja vaihdoin muuttujan "var $password = 'secret';" salasanan VirtualBox käyttäjäni salasanaksi. Sitten tallensin ja suljin tiedoston. Sitten käynnistin vboxweb-service:n uudestaan, jotta muutokset saatiin voimaan:
+Avasin konffitiedoston ja vaihdoin muuttujan "var $password = 'pass';" salasanan VirtualBox käyttäjäni salasanaksi. Sitten tallensin ja suljin tiedoston. Sitten käynnistin vboxweb-service:n uudestaan, jotta muutokset saatiin voimaan:
+
+![config.php](https://github.com/Eetu95/Palvelinten-hallinta-ict4tn022-3004/blob/master/miniprojektin%20kuvakaappaukset/6.PNG?raw=true)
+
 ```
   $ systemctl restart vboxweb-service
 ```
+Avasin Mozilla Firefox -selaimen herra koneella (Xubuntu) ja syötin orjan (Ubuntu Server) ip-osoitteen URL-kenttään
+--> http://ip-osoite/phpvirtualbox-5.0-5/
+
+![phpvirtualbox-5.0-5-admin](https://github.com/Eetu95/Palvelinten-hallinta-ict4tn022-3004/blob/master/miniprojektin%20kuvakaappaukset/7.png?raw=true)
+
+Phpvirtualbox -vastasi osoitteesta, syötin admin salasanan ja kirjauduin sisälle.
+
+![phpvirtualbox-5.0-5-admin](https://github.com/Eetu95/Palvelinten-hallinta-ict4tn022-3004/blob/master/miniprojektin%20kuvakaappaukset/8.png?raw=true)
+
+Uuden virtuaalikoneen luominen onnistui.
+
+### Automatisointi Saltilla
+
+
