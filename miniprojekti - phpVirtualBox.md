@@ -173,6 +173,6 @@ Top.sls:ssä ajetaan kaikille. Virtualbox tila ensin sitten phpvirtualbox.
 
 ![phpvirtualbox-browser](https://github.com/Eetu95/Palvelinten-hallinta-ict4tn022-3004/blob/master/miniprojektin%20kuvakaappaukset/9.png?raw=true)
 
-Kirjauduin palveluun (käyttäjä: admin salasana: admin). Muista vaihtaa käyttäjätunnus ja salasana ensimmäisen kirjautumisen jälkeen. Kirjautumisen yhteydessä tuli herja phpVirtualBox 5.0-5:n yhteensopimattomuudesta VirtualBox 5.2.22:n kanssa. Ilmeisesti uusimman versio saakin jo [täältä](https://github.com/phpvirtualbox/phpvirtualbox/releases)
+Kirjauduin palveluun (käyttäjä: admin salasana: admin). Muista vaihtaa käyttäjätunnus ja salasana ensimmäisen kirjautumisen jälkeen. Kirjautumisen yhteydessä tuli herja phpVirtualBox 5.0-5:n yhteensopimattomuudesta VirtualBox 5.2.22:n kanssa. Ilmeisesti uusimman phpVirtualBox -version saakin jo [täältä](https://github.com/phpvirtualbox/phpvirtualbox/releases). PhpVirtualBox -tilan paketit on hyvä muuttaa uudempaan.
 
 phpVirtualBox toimi normaalisti kokeiltuani sitä. PhpVirtualBox uudempaan versioon pävittäminen on erittäin suositeltua.
