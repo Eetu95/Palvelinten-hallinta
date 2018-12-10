@@ -88,7 +88,7 @@ saa laitettua virtuaalikoneen päälle.
 
 Nyt kun VirtualBox 5.2 <- (uusin versio tällähetkellä) on asennettu aloin asentamaan VirtualBoxia selaimeen (GUI, phpVirtualBox).
 
-Ensin loin uuden järjestelmäkäyttäjän rootilla ja lisäsin sen "vboxusers" ryhmään (Tätä tullaan tarviamaan):
+Ensin loin uuden järjestelmäkäyttäjän rootilla ja lisäsin sen "vboxusers" ryhmään (Tätä tullaan tarvitsemaan):
 ```
   $ useradd -m vbox -G vboxusers
 ``` 
