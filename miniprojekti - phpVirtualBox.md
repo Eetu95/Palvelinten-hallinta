@@ -187,7 +187,7 @@ Xubuntu 18.04.1. [https://xubuntu.org/news/18-04-1-released/](https://xubuntu.o
 
 Ubuntu 16.04.5 LTS (Xenial Xerus). [http://releases.ubuntu.com/16.04/](http://releases.ubuntu.com/16.04/)
 
-Websiteforstudents 2018 - VirtualBox 5.2 On Ubuntu 16.04 LTS Server (Headless). [https://websiteforstudents.com/virtualbox-5-2-on-ubuntu-16-04-lts-server-headless/](https://websiteforstudents.com/virtualbox-5-2-on-ubuntu-16-04-lts-server-headless/).
+Website for Students 2018 - VirtualBox 5.2 On Ubuntu 16.04 LTS Server (Headless). [https://websiteforstudents.com/virtualbox-5-2-on-ubuntu-16-04-lts-server-headless/](https://websiteforstudents.com/virtualbox-5-2-on-ubuntu-16-04-lts-server-headless/).
 
 Tech Republic 2018 - How to install phpVirtualBox for cloud-based VirtualBox management. [https://www.techrepublic.com/article/how-to-install-phpvirtualbox-for-cloud-based-virtualbox-management/](https://www.techrepublic.com/article/how-to-install-phpvirtualbox-for-cloud-based-virtualbox-management/)
 
