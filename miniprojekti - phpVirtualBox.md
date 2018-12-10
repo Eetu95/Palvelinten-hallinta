@@ -198,6 +198,10 @@ Website for Students 2018 - VirtualBox 5.2 On Ubuntu 16.04 LTS Server (Headless)
 
 Tech Republic 2018 - How to install phpVirtualBox for cloud-based VirtualBox management. [https://www.techrepublic.com/article/how-to-install-phpvirtualbox-for-cloud-based-virtualbox-management/](https://www.techrepublic.com/article/how-to-install-phpvirtualbox-for-cloud-based-virtualbox-management/)
 
+SourceForge 2018 - phpVirtualBox. [https://sourceforge.net/projects/phpvirtualbox/files/](https://sourceforge.net/projects/phpvirtualbox/files/)
+
+GitHub 2018. phpvirtualbox. [https://github.com/phpvirtualbox/phpvirtualbox/releases](https://github.com/phpvirtualbox/phpvirtualbox/releases)
+
 GitHub 2018. Eetu95 - salt. [https://github.com/Eetu95/salt](https://github.com/Eetu95/salt)
 
 Karvinen, Tero 2018: Aikataulu - Palvelinten hallinta ict4tn022 3004-ti, oma moduuli. [http://terokarvinen.com/2018/aikataulu-%E2%80%93-palvelinten-hallinta-ict4tn022-3004-ti-ja-3002-to-%E2%80%93-loppukevat-2018-5p](http://terokarvinen.com/2018/aikataulu-%E2%80%93-palvelinten-hallinta-ict4tn022-3004-ti-ja-3002-to-%E2%80%93-loppukevat-2018-5p)
