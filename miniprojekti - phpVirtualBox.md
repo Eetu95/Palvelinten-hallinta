@@ -86,7 +86,7 @@ saa laitettua virtuaalikoneen päälle.
 
 #### phpVirtualBox - (Käyttää selaimen kautta VirtualBoxia)
 
-Nyt kun VirtualBox 5.2 <- (uusin versio tällähetkellä) on asennettu aloin asentamaan VirtualBoxia selaimeen (GUI, phpVirtualBox).
+Nyt kun VirtualBox 5.2 <- (uusin versio tällähetkellä) on asennettu aloin asentamaan VirtualBoxia selaimeen (GUI, phpVirtualBox). Hyvät ohjeet tähän löytyy [täältä](https://www.techrepublic.com/article/how-to-install-phpvirtualbox-for-cloud-based-virtualbox-management/)
 
 Ensin loin uuden järjestelmäkäyttäjän rootilla ja lisäsin sen "vboxusers" ryhmään (Tätä tullaan tarvitsemaan):
 ```
@@ -176,3 +176,27 @@ Top.sls:ssä ajetaan kaikille. Virtualbox tila ensin sitten phpvirtualbox.
 Kirjauduin palveluun (käyttäjä: admin salasana: admin). Muista vaihtaa käyttäjätunnus ja salasana ensimmäisen kirjautumisen jälkeen. Kirjautumisen yhteydessä tuli herja phpVirtualBox 5.0-5:n yhteensopimattomuudesta VirtualBox 5.2.22:n kanssa. Ilmeisesti uusimman phpVirtualBox -version saakin jo [täältä](https://github.com/phpvirtualbox/phpvirtualbox/releases). PhpVirtualBox -tilan paketit on hyvä muuttaa uudempaan.
 
 phpVirtualBox toimi normaalisti kokeiltuani sitä. PhpVirtualBox uudempaan versioon pävittäminen on erittäin suositeltua.
+
+### Lähteet:
+
+Karvinen, Tero: Oppitunnit, Palvelinten hallinta -kurssi.
+
+VirtualBox 2018. [https://www.virtualbox.org/](https://www.virtualbox.org/)
+
+Xubuntu 18.04.1. [https://xubuntu.org/news/18-04-1-released/](https://xubuntu.org/news/18-04-1-released/)
+
+Ubuntu 16.04.5 LTS (Xenial Xerus). [http://releases.ubuntu.com/16.04/](http://releases.ubuntu.com/16.04/)
+
+Websiteforstudents 2018 - VirtualBox 5.2 On Ubuntu 16.04 LTS Server (Headless). [https://websiteforstudents.com/virtualbox-5-2-on-ubuntu-16-04-lts-server-headless/](https://websiteforstudents.com/virtualbox-5-2-on-ubuntu-16-04-lts-server-headless/).
+
+Tech Republic 2018 - How to install phpVirtualBox for cloud-based VirtualBox management. [https://www.techrepublic.com/article/how-to-install-phpvirtualbox-for-cloud-based-virtualbox-management/](https://www.techrepublic.com/article/how-to-install-phpvirtualbox-for-cloud-based-virtualbox-management/)
+
+GitHub 2018. Eetu95 - salt. [https://github.com/Eetu95/salt](https://github.com/Eetu95/salt)
+
+Karvinen, Tero 2018: Aikataulu - Palvelinten hallinta ict4tn022 3004-ti, oma moduuli. [http://terokarvinen.com/2018/aikataulu-%E2%80%93-palvelinten-hallinta-ict4tn022-3004-ti-ja-3002-to-%E2%80%93-loppukevat-2018-5p](http://terokarvinen.com/2018/aikataulu-%E2%80%93-palvelinten-hallinta-ict4tn022-3004-ti-ja-3002-to-%E2%80%93-loppukevat-2018-5p)
+
+### Muuta:
+
+Kaikki kuvat on otettu Microsoft Windows Kuvankaappaustyökalulla. Kuvat löytyvät GitHubistani.
+
+Tätä dokumenttia saa kopioida ja muokata GNU GPL (versio 2 tai uudempi) mukaisesti. [https://www.gnu.org/licenses/gpl.html](https://www.gnu.org/licenses/gpl.html)
