@@ -4,6 +4,13 @@ Tavoitteenani oli tehdä SaltStack -projekti, joka asentaa VirtualBoxin Linuxill
 
 Käytin projektin demoamisessa VirtualBox VM ympäristöä. Asensin VirtualBoxiin Linux Xubuntu 18.04 Desktop AMD64 sekä Linux Ubuntu Server 16.04.5 LTS 64-bit Virtuaalikoneet. Käytin Linux Xubuntua herrana ja Linux Ubuntu Serveriä orjana.
 
+Tietokokeen rautaa:
+
+Prosessori: Intel Core i5 4960K @ 3.50GHz
+Haswell 22nm Tekniikkaa
+
+RAM-muisti: 8,00Gt Kaksi-Kanava DDR3 1600MHz (10-10-10-30)
+
 ### Manuaalinen asennus
 
 Asensin SaltStackin virtuaalikoneille. Päivitin molemmat koneet:
