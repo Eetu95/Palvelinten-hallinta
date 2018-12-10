@@ -157,7 +157,7 @@ Uuden virtuaalikoneen luominen onnistui.
 
 ![phpvirtualbox-states-run](https://github.com/Eetu95/Palvelinten-hallinta-ict4tn022-3004/blob/master/miniprojektin%20kuvakaappaukset/10.PNG?raw=true)
 
-Molemmat Salt-tilat (virtualbox, phpvirtualbox) ajettuna onnistuneesti Linux Ubuntu Server 16.04.5 64-bit LTS Xenial Xerus:lla. Tilojen ajon jälkeen (sudo salt '*' state.highstate) käyttäjän pitää vielä itse määritellä vbox käyttäjälle oma salanana (sudo passwd vbox) ja vaihtaa se /var/www/html/phpvirtualbox-5.0-5/config.php -tiedostossa 'pass' tilalle. Lopuksi käyttäjän pitää vielä itse käynnistää vboxweb-service ja apache2 uudelleen, jotta palvelu saadaan toimimaan.
+Molemmat Salt-tilat (virtualbox, phpvirtualbox) ajettuna onnistuneesti Linux Ubuntu Server 16.04.5 64-bit LTS Xenial Xerus:lla. Tilojen ajon jälkeen (sudo salt '*' state.highstate) käyttäjän pitää vielä itse määritellä vbox käyttäjälle oma salanana (sudo passwd vbox) ja vaihtaa se /var/www/html/phpvirtualbox-5.0-5/config.php -tiedostossa 'pass' tilalle. Lopuksi käyttäjän pitää vielä itse käynnistää vboxweb-service ja apache2 uudelleen, jotta palvelu saadaan toimimaan (sudo systemctl restart vboxweb-service.service apache2.service).
 
 ![virtualbox-5.2](https://github.com/Eetu95/Palvelinten-hallinta-ict4tn022-3004/blob/master/miniprojektin%20kuvakaappaukset/11.PNG?raw=true)
 
