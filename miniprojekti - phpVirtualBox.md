@@ -155,4 +155,24 @@ Uuden virtuaalikoneen luominen onnistui.
 
 ### Automatisointi Saltilla
 
+![phpvirtualbox-states-run](https://github.com/Eetu95/Palvelinten-hallinta-ict4tn022-3004/blob/master/miniprojektin%20kuvakaappaukset/10.PNG?raw=true)
 
+Molemmat Salt-tilat (virtualbox, phpvirtualbox) ajettuna onnistuneesti Linux Ubuntu Server 16.04.5 64-bit LTS Xenial Xerus:lla. Tilojen ajon jälkeen (sudo salt '*' state.highstate) käyttäjän pitää vielä itse määritellä vbox käyttäjälle oma salanana (sudo passwd vbox) ja vaihtaa se /var/www/html/phpvirtualbox-5.0-5/config.php -tiedostossa 'pass' tilalle. Lopuksi käyttäjän pitää vielä itse käynnistää vboxweb-service ja apache2 uudelleen, jotta palvelu saadaan toimimaan.
+
+![virtualbox-5.2](https://github.com/Eetu95/Palvelinten-hallinta-ict4tn022-3004/blob/master/miniprojektin%20kuvakaappaukset/11.PNG?raw=true)
+
+Virtualbox init.sls. Voi olla järkevämpää ladata VirtualBox-5.0, koska se on yhteensopivampi phpvirtualbox-5.0-5:n kanssa. VirtualBox-5.2 toimii kyllä myös phpVirtualBox-5.0-5:n kanssa, mutta se vain herjaa yhteensopimattomuudesta selaimessa kirjautuessa palveluun. Tätä tilaa on ajettu Linux Ubuntu Server 16.04.5 64-bit LTS Xenial Xerus koneella. Ei takeita toimivuudesta muilla Linux jakeluilla. Tilaa saa muuttaa vapaasti omiin tarpeisiinsa sopivaksi.
+
+![phpvirtualbox](https://github.com/Eetu95/Palvelinten-hallinta-ict4tn022-3004/blob/master/miniprojektin%20kuvakaappaukset/12.PNG?raw=true)
+
+phpVirtualBox init.sls. Tässä on tila joka ajaa phpVirtualBox:n (5.0-5)(5.2 -versio on ilmeisesti jo saatavilla). Ajetaan yhdessä virtualbox -tilan kanssa. Toimii edellä mainitussa Linux Ubuntu Server:ssä. Suosittelen tilan muutosta uudempaan phpVirtualBox versioon heti kun saatavilla.
+
+![top.sls](https://github.com/Eetu95/Palvelinten-hallinta-ict4tn022-3004/blob/master/miniprojektin%20kuvakaappaukset/13.PNG?raw=true)
+
+Top.sls:ssä ajetaan kaikille. Virtualbox tila ensin sitten phpvirtualbox.
+
+![phpvirtualbox-browser](https://github.com/Eetu95/Palvelinten-hallinta-ict4tn022-3004/blob/master/miniprojektin%20kuvakaappaukset/9.png?raw=true)
+
+Kirjauduin palveluun (käyttäjä: admin salasana: admin). Muista vaihtaa käyttäjätunnus ja salasana ensimmäisen kirjautumisen jälkeen. Kirjautumisen yhteydessä tuli herja phpVirtualBox 5.0-5:n yhteensopimattomuudesta VirtualBox 5.2.22:n kanssa. Ilmeisesti uusimman versio saakin jo [täältä](https://github.com/phpvirtualbox/phpvirtualbox/releases)
+
+phpVirtualBox toimi normaalisti kokeiltuani sitä. PhpVirtualBox uudempaan versioon pävittäminen on erittäin suositeltua.
